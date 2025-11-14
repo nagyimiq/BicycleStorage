@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- Engedélyek -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -20,7 +19,6 @@
         tools:targetApi="31"
         android:usesCleartextTraffic="false">
 
-        <!-- ÚJ: Bejelentkezés a belépési pont (LAUNCHER) -->
         <activity
             android:name=".auth.LoginActivity"
             android:exported="true"
@@ -32,28 +30,24 @@
             </intent-filter>
         </activity>
 
-        <!-- Regisztráció (appon belülről hívható) -->
         <activity
             android:name=".auth.RegisterActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
-        <!-- Fiók (adat módosítás / kijelentkezés) -->
         <activity
             android:name=".auth.AccountActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
-        <!-- Fő térkép képernyő – NEM LAUNCHER többé -->
         <activity
             android:name=".MainActivity"
             android:exported="false"
             tools:ignore="MissingClass" />
 
-        <!-- Google Maps API kulcs (JAVASOLT: korlátozd csomagnév + SHA-1 alapján!) -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyAkzbLz06eOFc5MNG8hRX9C5pOIjOL6mMQ" />
+            android:value="API_KEY" />
 
     </application>
 
